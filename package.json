@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/vegajavier/bamazon-MySQL/issues"
   },
-  "homepage": "https://github.com/vegajavier/bamazon-MySQL#readme"
+  "homepage": "https://github.com/vegajavier/bamazon-MySQL#readme",
+  "dependencies": {
+    "boxen": "^2.0.0",
+    "figlet": "^1.2.1"
+  }
 }
