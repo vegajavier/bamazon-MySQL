@@ -1,4 +1,4 @@
-//let mysql = require("mysql");
+let mysql = require("mysql");
 let figlet = require('figlet');
 let boxen = require('boxen');
 let prompt = require('prompt');
