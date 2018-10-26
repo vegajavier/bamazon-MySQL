@@ -1,6 +1,7 @@
-let mysql = require("mysql");
-var figlet = require('figlet');
-const boxen = require("boxen");
+//let mysql = require("mysql");
+let figlet = require('figlet');
+let boxen = require('boxen');
+let prompt = require('prompt');
 
 var connection = mysql.createConnection({
     host: "localhost",
@@ -8,17 +9,14 @@ var connection = mysql.createConnection({
     port: 3306,
   
     user: "root",
-  
     password: "",
-    database: "bamazon_db"
-  });
+    database: "Bamazon_db"
+});
 
   connection.connect(function(err){
-      if(err) throw err;
+    if(err) throw err;
       start();
   });
-
-
 
 figlet("Bamazon", function(err,data ){
     if (err){
