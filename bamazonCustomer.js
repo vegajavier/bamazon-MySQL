@@ -7,7 +7,7 @@ let connection = mysql.createConnection({
     host: "localhost",
     port: 3306,
     user: "root",    
-    password: "",
+    password: "@Nthony04192015",
     database: "bamazon"
 })
   connection.connect(function(err){
@@ -19,7 +19,7 @@ let connection = mysql.createConnection({
 let makeTable = function(){
     connection.query("SELECT * FROM Inventory", function(err,res){
         for(var i = 0; i<res.length; i++){
-            console.log(res[i].ItemId+ "|"+res[i].ProductName+ "|" +res[i].DepartmentName+ "|" +res[i].price+ "|" +res[i].AvailableInventory+ "\n");
+            console.log(res[i].ItemId+ " | "+res[i].ProductName+ " | " +res[i].DepartmentName+ " | " +res[i].price+ " | " +res[i].AvailableInventory+ "\n");
         }
     promptUser(res);
     })
