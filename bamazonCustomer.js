@@ -1,13 +1,11 @@
 let mysql = require("mysql");
 let figlet = require('figlet');
 let boxen = require('boxen');
-//let prompt = require('prompt');
+let prompt = require('prompt');
 
 let connection = mysql.createConnection({
     host: "localhost",
-  
     port: 3306,
-  
     user: "root",    
     password: "",
     database: "Bamazon_db"
@@ -21,11 +19,11 @@ figlet("Bamazon", function(err,data ){
     if (err){
         //console.log("not working")
         //Firefox, these function behave quite differently: log only prints out a toString representation, whereas dir prints out a navigable tree. STACKOVERFLOW..
-        console.dir(err);
-        return;
+        console.log(err);
     }
     console.log(data)
     console.log(boxen('WELCOME TO BAMAZON', {padding: 1}));
+    console.log("\n")
     console.log (" | Product | Dept Category |  Price  |  Available Inventory  |   " );
     console.log ("_______________________________________________________________");
 
