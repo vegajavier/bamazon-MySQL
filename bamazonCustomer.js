@@ -20,7 +20,7 @@ connection.connect(function (err) {
 let makeTable = function () {
     connection.query("SELECT * FROM Inventory", function (err, res) {
         for (var i = 0; i < res.length; i++) {
-            console.log(res[i].ItemId + " | " + res[i].ProductName + " | " + res[i].DepartmentName + " | " + res[i].price + " | " + res[i].AvailableInventory + "\n");
+            console.log(res[i].ItemId + " | " + res[i].ProductName + " | " + res[i].DepartmentName + " | " + res[i].Price + " | " + res[i].AvailableInventory + "\n");
         }
         promptUser(res);
     })
@@ -54,7 +54,6 @@ let promptUser = function (res) {
                         connection.query("UPDATE Inventory SET")
                     }
                 })
-
             }
         }
     })
